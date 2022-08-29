@@ -1,3 +1,9 @@
+type note = 
+ record {
+   content: text;
+   title: text;
+ };
 service : {
   createNote: (text, text) -> () oneway;
+  readNotes: () -> (vec note) query;
 }
